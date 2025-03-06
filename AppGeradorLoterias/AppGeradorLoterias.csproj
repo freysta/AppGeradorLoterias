@@ -58,6 +58,18 @@
     <Compile Include="Formularios\FormDiaDeSorte.Designer.cs">
       <DependentUpon>FormDiaDeSorte.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FormLotoFacil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormLotoFacil.Designer.cs">
+      <DependentUpon>FormLotoFacil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormLotoMania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormLotoMania.Designer.cs">
+      <DependentUpon>FormLotoMania.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FormMegaSena.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,34 +82,10 @@
     <Compile Include="Formularios\FormQuina.Designer.cs">
       <DependentUpon>FormQuina.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FormLotomania.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FormLotomania.Designer.cs">
-      <DependentUpon>FormLotomania.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\FormLotoFacil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FormLotoFacil.Designer.cs">
-      <DependentUpon>FormLotoFacil.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormDiaDeSorte.resx">
-      <DependentUpon>FormDiaDeSorte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormMegaSena.resx">
-      <DependentUpon>FormMegaSena.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormQuina.resx">
-      <DependentUpon>FormQuina.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormLotomania.resx">
-      <DependentUpon>FormLotomania.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormLotoFacil.resx">
       <DependentUpon>FormLotoFacil.cs</DependentUpon>

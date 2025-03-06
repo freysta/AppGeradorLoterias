@@ -85,5 +85,6 @@ namespace AppGeradorLoterias.Formularios
             lbPar.Text = "PARES";
             lbImpar.Text = "ÍMPARES"; 
         }
+
     }
 }
