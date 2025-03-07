@@ -1,6 +1,6 @@
 ﻿namespace AppGeradorLoterias.Formularios
 {
-    partial class FormDiaDeSorte
+    partial class FormSuperSete
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,6 @@
             this.lbPar = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lbMes = new System.Windows.Forms.Label();
             this.lbMaisSorteados = new System.Windows.Forms.Label();
             this.lbMenosSorteados = new System.Windows.Forms.Label();
             this.dtvNumeros = new System.Windows.Forms.DataGridView();
@@ -87,9 +86,9 @@
             this.label4.ForeColor = System.Drawing.Color.MediumVioletRed;
             this.label4.Location = new System.Drawing.Point(155, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 25);
+            this.label4.Size = new System.Drawing.Size(132, 25);
             this.label4.TabIndex = 35;
-            this.label4.Text = "DIA DE SORTE";
+            this.label4.Text = "SUPER SETE";
             // 
             // label3
             // 
@@ -101,23 +100,12 @@
             this.label3.TabIndex = 34;
             this.label3.Text = "NÚMEROS DA SORTE";
             // 
-            // lbMes
-            // 
-            this.lbMes.AutoSize = true;
-            this.lbMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lbMes.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lbMes.Location = new System.Drawing.Point(10, 130);
-            this.lbMes.Name = "lbMes";
-            this.lbMes.Size = new System.Drawing.Size(49, 20);
-            this.lbMes.TabIndex = 39;
-            this.lbMes.Text = "MÊS";
-            // 
             // lbMaisSorteados
             // 
             this.lbMaisSorteados.AutoSize = true;
             this.lbMaisSorteados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbMaisSorteados.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lbMaisSorteados.Location = new System.Drawing.Point(10, 170);
+            this.lbMaisSorteados.Location = new System.Drawing.Point(10, 130);
             this.lbMaisSorteados.Name = "lbMaisSorteados";
             this.lbMaisSorteados.Size = new System.Drawing.Size(162, 20);
             this.lbMaisSorteados.TabIndex = 40;
@@ -128,7 +116,7 @@
             this.lbMenosSorteados.AutoSize = true;
             this.lbMenosSorteados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbMenosSorteados.ForeColor = System.Drawing.Color.DarkRed;
-            this.lbMenosSorteados.Location = new System.Drawing.Point(10, 210);
+            this.lbMenosSorteados.Location = new System.Drawing.Point(10, 170);
             this.lbMenosSorteados.Name = "lbMenosSorteados";
             this.lbMenosSorteados.Size = new System.Drawing.Size(179, 20);
             this.lbMenosSorteados.TabIndex = 41;
@@ -207,15 +195,14 @@
             this.panelEstatisticas.Controls.Add(this.lbClass);
             this.panelEstatisticas.Controls.Add(this.lbImpar);
             this.panelEstatisticas.Controls.Add(this.lbPar);
-            this.panelEstatisticas.Controls.Add(this.lbMes);
             this.panelEstatisticas.Controls.Add(this.lbMaisSorteados);
             this.panelEstatisticas.Controls.Add(this.lbMenosSorteados);
             this.panelEstatisticas.Location = new System.Drawing.Point(12, 130);
             this.panelEstatisticas.Name = "panelEstatisticas";
-            this.panelEstatisticas.Size = new System.Drawing.Size(260, 250);
+            this.panelEstatisticas.Size = new System.Drawing.Size(260, 210);
             this.panelEstatisticas.TabIndex = 42;
             // 
-            // FormDiaDeSorte
+            // FormSuperSete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -226,8 +213,8 @@
             this.Controls.Add(this.dtvNumeros);
             this.Controls.Add(this.btLimpar);
             this.Controls.Add(this.btGerar);
-            this.Name = "FormDiaDeSorte";
-            this.Text = "FormDiaDeSorte";
+            this.Name = "FormSuperSete";
+            this.Text = "FormSuperSete";
             ((System.ComponentModel.ISupportInitialize)(this.dtvNumeros)).EndInit();
             this.panelEstatisticas.ResumeLayout(false);
             this.panelEstatisticas.PerformLayout();
@@ -242,7 +229,6 @@
         private System.Windows.Forms.Label lbPar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbMes;
         private System.Windows.Forms.Label lbMaisSorteados;
         private System.Windows.Forms.Label lbMenosSorteados;
         private System.Windows.Forms.DataGridView dtvNumeros;

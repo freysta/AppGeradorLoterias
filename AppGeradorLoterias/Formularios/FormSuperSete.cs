@@ -7,12 +7,12 @@ using System.Windows.Forms;
 
 namespace AppGeradorLoterias.Formularios
 {
-    public partial class FormDiaDeSorte : Form
+    public partial class FormSuperSete : Form
     {
         public List<int> NumerosDaSorte = new List<int>();
         private Dictionary<int, int> FrequenciaNumeros = new Dictionary<int, int>();
 
-        public FormDiaDeSorte()
+        public FormSuperSete()
         {
             InitializeComponent();
             InicializarFrequencia();
@@ -20,7 +20,7 @@ namespace AppGeradorLoterias.Formularios
 
         private void InicializarFrequencia()
         {
-            for (int i = 1; i <= 31; i++)
+            for (int i = 1; i <= 49; i++)
             {
                 FrequenciaNumeros[i] = 0;
             }
@@ -47,7 +47,8 @@ namespace AppGeradorLoterias.Formularios
         {
             lbPar.Text = "PARES: " + par;
             lbImpar.Text = "ÍMPARES: " + impar;
-            if ((par == 3 && impar == 4) || (par == 4 && impar == 3))
+
+            if (par == 3 && impar == 4 || par == 4 && impar == 3)
             {
                 lbClass.Text = "BALANCEADO!";
                 lbClass.ForeColor = Color.Green;
@@ -60,11 +61,11 @@ namespace AppGeradorLoterias.Formularios
             else if (impar > par)
             {
                 lbClass.Text = "MAIORIA ÍMPARES!";
-                lbClass.ForeColor = Color.Red;
+                lbClass.ForeColor = Color.OrangeRed;
             }
             else
             {
-                lbClass.Text = "ANALISAR";
+                lbClass.Text = "VARIADO!";
                 lbClass.ForeColor = Color.Black;
             }
         }
@@ -80,14 +81,12 @@ namespace AppGeradorLoterias.Formularios
 
             while (cont < 7)
             {
-                numero = radNum.Next(1, 32);
+                numero = radNum.Next(1, 50);
                 if (!NumerosDaSorte.Contains(numero))
                 {
                     NumerosDaSorte.Add(numero);
-                    if (numero % 2 == 0)
-                        qtdPar++;
-                    else
-                        qtdImpar++;
+                    if (numero % 2 == 0) qtdPar++;
+                    else qtdImpar++;
                     cont++;
                 }
             }
@@ -98,9 +97,6 @@ namespace AppGeradorLoterias.Formularios
             ExibirEstatisticas();
 
             dtvNumeros.DataSource = NumerosDaSorte.Select(n => new { Numero = n }).ToList();
-            string[] meses = { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" };
-            string mesSorte = meses[radNum.Next(0, 12)];
-            lbMes.Text = "MÊS: " + mesSorte;
         }
 
         public void LimparTabela()
@@ -122,7 +118,6 @@ namespace AppGeradorLoterias.Formularios
             lbClass.Text = "CLASSIFICAÇÃO";
             lbPar.Text = "PARES";
             lbImpar.Text = "ÍMPARES";
-            lbMes.Text = "MÊS";
         }
     }
 }

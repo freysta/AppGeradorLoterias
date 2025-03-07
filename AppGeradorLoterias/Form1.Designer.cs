@@ -28,58 +28,13 @@
         {
             this.btQuina = new System.Windows.Forms.Button();
             this.btMega = new System.Windows.Forms.Button();
-            this.btLotoFacil = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.buttonSuperSete = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelCredits = new System.Windows.Forms.Label();
+            this.btLotoFacil = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.labelTitle.ForeColor = System.Drawing.Color.DarkBlue;
-            this.labelTitle.Location = new System.Drawing.Point(12, 9);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(681, 40);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "GERADOR DE LOTERIAS";
-            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelCredits
-            // 
-            this.labelCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic);
-            this.labelCredits.ForeColor = System.Drawing.Color.Gray;
-            this.labelCredits.Location = new System.Drawing.Point(12, 52);
-            this.labelCredits.Name = "labelCredits";
-            this.labelCredits.Size = new System.Drawing.Size(681, 20);
-            this.labelCredits.TabIndex = 1;
-            this.labelCredits.Text = "Desenvolvido por Gabriel Lucena e Felipe Garcia 2 - Periodo (Design by : Reinaldo XD)";
-            this.labelCredits.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btMega
-            // 
-            this.btMega.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btMega.ForeColor = System.Drawing.Color.Green;
-            this.btMega.Location = new System.Drawing.Point(79, 131);
-            this.btMega.Name = "btMega";
-            this.btMega.Size = new System.Drawing.Size(179, 42);
-            this.btMega.TabIndex = 2;
-            this.btMega.Text = "MEGA SENA";
-            this.btMega.UseVisualStyleBackColor = true;
-            this.btMega.Click += new System.EventHandler(this.btMega_Click);
-            // 
-            // btLotoFacil
-            // 
-            this.btLotoFacil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btLotoFacil.ForeColor = System.Drawing.Color.MediumVioletRed;
-            this.btLotoFacil.Location = new System.Drawing.Point(428, 131);
-            this.btLotoFacil.Name = "btLotoFacil";
-            this.btLotoFacil.Size = new System.Drawing.Size(179, 42);
-            this.btLotoFacil.TabIndex = 3;
-            this.btLotoFacil.Text = "LOTOFÁCIL";
-            this.btLotoFacil.UseVisualStyleBackColor = true;
-            this.btLotoFacil.Click += new System.EventHandler(this.btLotoFacil_Click);
             // 
             // btQuina
             // 
@@ -92,6 +47,18 @@
             this.btQuina.Text = "QUINA";
             this.btQuina.UseVisualStyleBackColor = true;
             this.btQuina.Click += new System.EventHandler(this.btQuina_Click);
+            // 
+            // btMega
+            // 
+            this.btMega.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btMega.ForeColor = System.Drawing.Color.Green;
+            this.btMega.Location = new System.Drawing.Point(79, 131);
+            this.btMega.Name = "btMega";
+            this.btMega.Size = new System.Drawing.Size(179, 42);
+            this.btMega.TabIndex = 2;
+            this.btMega.Text = "MEGA SENA";
+            this.btMega.UseVisualStyleBackColor = true;
+            this.btMega.Click += new System.EventHandler(this.btMega_Click);
             // 
             // button1
             // 
@@ -117,11 +84,59 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // buttonSuperSete
+            // 
+            this.buttonSuperSete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.buttonSuperSete.ForeColor = System.Drawing.Color.DarkOrange;
+            this.buttonSuperSete.Location = new System.Drawing.Point(249, 172);
+            this.buttonSuperSete.Name = "buttonSuperSete";
+            this.buttonSuperSete.Size = new System.Drawing.Size(179, 42);
+            this.buttonSuperSete.TabIndex = 7;
+            this.buttonSuperSete.Text = "SUPER SETE";
+            this.buttonSuperSete.UseVisualStyleBackColor = true;
+            this.buttonSuperSete.Click += new System.EventHandler(this.buttonSuperSete_Click);
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.labelTitle.ForeColor = System.Drawing.Color.DarkBlue;
+            this.labelTitle.Location = new System.Drawing.Point(12, 9);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(681, 40);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "GERADOR DE LOTERIAS";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelCredits
+            // 
+            this.labelCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic);
+            this.labelCredits.ForeColor = System.Drawing.Color.Gray;
+            this.labelCredits.Location = new System.Drawing.Point(12, 52);
+            this.labelCredits.Name = "labelCredits";
+            this.labelCredits.Size = new System.Drawing.Size(681, 20);
+            this.labelCredits.TabIndex = 1;
+            this.labelCredits.Text = "Desenvolvido por Gabriel Lucena e Felipe Garcia 2 - Periodo (Design by : Reinaldo" +
+    " XD)";
+            this.labelCredits.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btLotoFacil
+            // 
+            this.btLotoFacil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btLotoFacil.ForeColor = System.Drawing.Color.MediumVioletRed;
+            this.btLotoFacil.Location = new System.Drawing.Point(428, 131);
+            this.btLotoFacil.Name = "btLotoFacil";
+            this.btLotoFacil.Size = new System.Drawing.Size(179, 42);
+            this.btLotoFacil.TabIndex = 3;
+            this.btLotoFacil.Text = "LOTOFÁCIL";
+            this.btLotoFacil.UseVisualStyleBackColor = true;
+            this.btLotoFacil.Click += new System.EventHandler(this.btLotoFacil_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 450);
+            this.Controls.Add(this.buttonSuperSete);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btQuina);
@@ -132,16 +147,18 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+
         }
 
         #endregion
 
         private System.Windows.Forms.Button btQuina;
         private System.Windows.Forms.Button btMega;
-        private System.Windows.Forms.Button btLotoFacil;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonSuperSete;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelCredits;
+        private System.Windows.Forms.Button btLotoFacil;
     }
 }

@@ -10,10 +10,37 @@ namespace AppGeradorLoterias.Formularios
     public partial class FormQuina : Form
     {
         public List<int> NumerosDaSorte = new List<int>();
+        private Dictionary<int, int> FrequenciaNumeros = new Dictionary<int, int>();
 
         public FormQuina()
         {
             InitializeComponent();
+            InicializarFrequencia();
+        }
+
+        private void InicializarFrequencia()
+        {
+            for (int i = 1; i <= 80; i++)
+            {
+                FrequenciaNumeros[i] = 0;
+            }
+        }
+
+        private void AtualizarFrequencia()
+        {
+            foreach (int num in NumerosDaSorte)
+            {
+                FrequenciaNumeros[num]++;
+            }
+        }
+
+        private void ExibirEstatisticas()
+        {
+            var maisSorteados = FrequenciaNumeros.OrderByDescending(n => n.Value).Take(3).Select(n => n.Key);
+            var menosSorteados = FrequenciaNumeros.OrderBy(n => n.Value).Take(3).Select(n => n.Key);
+
+            lbMaisSorteados.Text = "MAIS SORTEADOS: " + string.Join(", ", maisSorteados);
+            lbMenosSorteados.Text = "MENOS SORTEADOS: " + string.Join(", ", menosSorteados);
         }
 
         private void Comparacao(int par, int impar)
@@ -70,6 +97,9 @@ namespace AppGeradorLoterias.Formularios
 
             NumerosDaSorte = NumerosDaSorte.OrderBy(n => n).ToList();
             Comparacao(qtdPar, qtdImpar);
+            AtualizarFrequencia();
+            ExibirEstatisticas();
+
             dtvNumeros.DataSource = NumerosDaSorte.Select(n => new { Numero = n }).ToList();
         }
 
@@ -77,6 +107,8 @@ namespace AppGeradorLoterias.Formularios
         {
             NumerosDaSorte.Clear();
             dtvNumeros.DataSource = NumerosDaSorte.Select(n => new { Numero = n }).ToList();
+            lbMaisSorteados.Text = "MAIS SORTEADOS: ";
+            lbMenosSorteados.Text = "MENOS SORTEADOS: ";
         }
 
         private void btGerar_Click(object sender, EventArgs e)

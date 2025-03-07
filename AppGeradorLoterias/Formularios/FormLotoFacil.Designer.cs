@@ -10,13 +10,11 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">bool disposing</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
@@ -38,29 +36,33 @@
             this.lbPar = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lbMaisSorteados = new System.Windows.Forms.Label();
+            this.lbMenosSorteados = new System.Windows.Forms.Label();
             this.dtvNumeros = new System.Windows.Forms.DataGridView();
             this.NumeroDaSorte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btLimpar = new System.Windows.Forms.Button();
             this.btGerar = new System.Windows.Forms.Button();
+            this.panelEstatisticas = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtvNumeros)).BeginInit();
+            this.panelEstatisticas.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbClass
             // 
-            this.lbClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbClass.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.lbClass.Location = new System.Drawing.Point(82, 258);
+            this.lbClass.Location = new System.Drawing.Point(10, 10);
             this.lbClass.Name = "lbClass";
-            this.lbClass.Size = new System.Drawing.Size(162, 24);
+            this.lbClass.Size = new System.Drawing.Size(220, 24);
             this.lbClass.TabIndex = 38;
             this.lbClass.Text = "CLASSIFICAÇÃO";
             // 
             // lbImpar
             // 
             this.lbImpar.AutoSize = true;
-            this.lbImpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbImpar.ForeColor = System.Drawing.Color.Purple;
-            this.lbImpar.Location = new System.Drawing.Point(82, 200);
+            this.lbImpar.Location = new System.Drawing.Point(10, 50);
             this.lbImpar.Name = "lbImpar";
             this.lbImpar.Size = new System.Drawing.Size(89, 20);
             this.lbImpar.TabIndex = 37;
@@ -69,9 +71,9 @@
             // lbPar
             // 
             this.lbPar.AutoSize = true;
-            this.lbPar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lbPar.ForeColor = System.Drawing.Color.Purple;
-            this.lbPar.Location = new System.Drawing.Point(82, 158);
+            this.lbPar.Location = new System.Drawing.Point(10, 90);
             this.lbPar.Name = "lbPar";
             this.lbPar.Size = new System.Drawing.Size(69, 20);
             this.lbPar.TabIndex = 36;
@@ -80,7 +82,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.MediumVioletRed;
             this.label4.Location = new System.Drawing.Point(155, 9);
             this.label4.Name = "label4";
@@ -91,12 +93,34 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(276, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(164, 16);
             this.label3.TabIndex = 34;
             this.label3.Text = "NÚMEROS DA SORTE";
+            // 
+            // lbMaisSorteados
+            // 
+            this.lbMaisSorteados.AutoSize = true;
+            this.lbMaisSorteados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbMaisSorteados.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lbMaisSorteados.Location = new System.Drawing.Point(10, 130);
+            this.lbMaisSorteados.Name = "lbMaisSorteados";
+            this.lbMaisSorteados.Size = new System.Drawing.Size(162, 20);
+            this.lbMaisSorteados.TabIndex = 40;
+            this.lbMaisSorteados.Text = "MAIS SORTEADOS: ";
+            // 
+            // lbMenosSorteados
+            // 
+            this.lbMenosSorteados.AutoSize = true;
+            this.lbMenosSorteados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbMenosSorteados.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbMenosSorteados.Location = new System.Drawing.Point(10, 170);
+            this.lbMenosSorteados.Name = "lbMenosSorteados";
+            this.lbMenosSorteados.Size = new System.Drawing.Size(179, 20);
+            this.lbMenosSorteados.TabIndex = 41;
+            this.lbMenosSorteados.Text = "MENOS SORTEADOS: ";
             // 
             // dtvNumeros
             // 
@@ -104,7 +128,7 @@
             this.dtvNumeros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -115,7 +139,7 @@
             this.NumeroDaSorte});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -125,7 +149,7 @@
             this.dtvNumeros.Name = "dtvNumeros";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -165,14 +189,25 @@
             this.btGerar.UseVisualStyleBackColor = true;
             this.btGerar.Click += new System.EventHandler(this.btGerar_Click);
             // 
+            // panelEstatisticas
+            // 
+            this.panelEstatisticas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelEstatisticas.Controls.Add(this.lbClass);
+            this.panelEstatisticas.Controls.Add(this.lbImpar);
+            this.panelEstatisticas.Controls.Add(this.lbPar);
+            this.panelEstatisticas.Controls.Add(this.lbMaisSorteados);
+            this.panelEstatisticas.Controls.Add(this.lbMenosSorteados);
+            this.panelEstatisticas.Location = new System.Drawing.Point(12, 130);
+            this.panelEstatisticas.Name = "panelEstatisticas";
+            this.panelEstatisticas.Size = new System.Drawing.Size(260, 250);
+            this.panelEstatisticas.TabIndex = 42;
+            // 
             // FormLotoFacil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 450);
-            this.Controls.Add(this.lbClass);
-            this.Controls.Add(this.lbImpar);
-            this.Controls.Add(this.lbPar);
+            this.Controls.Add(this.panelEstatisticas);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtvNumeros);
@@ -180,11 +215,11 @@
             this.Controls.Add(this.btGerar);
             this.Name = "FormLotoFacil";
             this.Text = "FormLotoFacil";
- 
             ((System.ComponentModel.ISupportInitialize)(this.dtvNumeros)).EndInit();
+            this.panelEstatisticas.ResumeLayout(false);
+            this.panelEstatisticas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -194,9 +229,12 @@
         private System.Windows.Forms.Label lbPar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbMaisSorteados;
+        private System.Windows.Forms.Label lbMenosSorteados;
         private System.Windows.Forms.DataGridView dtvNumeros;
         private System.Windows.Forms.Button btLimpar;
         private System.Windows.Forms.Button btGerar;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumeroDaSorte;
+        private System.Windows.Forms.Panel panelEstatisticas;
     }
 }
